@@ -8,8 +8,8 @@ const opentdb = require('opentdb-api');
  
 var options = {
     amount: 5,
-    category: 'cartoons',
-    difficulty: 'hard',
+    category: 'any',
+    difficulty: 'easy',
     type: 'multiple'
 }
 
