@@ -8,7 +8,7 @@ const opentdb = require('opentdb-api');
  
 var options = {
     amount: 5,
-    category: 'any',
+    category: 'general',
     difficulty: 'easy',
     type: 'multiple'
 }
@@ -26,16 +26,18 @@ class Quiz extends Component {
             });
           });
     };
-    componentDidMount(){
-        this.getQuestions();
-    }
     playAgain = () => {
+        window.location.reload();
         this.getQuestions();
         this.setState({
             score: 0,
-            responses: 0,
+            responses: 0
         });
+        return false;
     };
+    componentDidMount(){
+        this.getQuestions();
+    }
     computeAnswer = (answer, correct_answer) => {
         if (answer === correct_answer) {
             this.setState({

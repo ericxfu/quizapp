@@ -7,7 +7,7 @@ function spliceCorrectAnswer(array, answer){
 const QuestionBox = ({question, options, correct, selected}) => {
   const [answer, setAnswer] = useState(options);
   if (!options.includes(correct))
-    spliceCorrectAnswer(options, correct);
+   spliceCorrectAnswer(options, correct);
   return (
     <div ClassName = "QuestionBox">
       <div className="question">{question}</div>
